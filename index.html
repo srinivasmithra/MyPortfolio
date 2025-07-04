@@ -10,7 +10,7 @@
 <body class="text-white bg-gray-900">
 
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-black bg-opacity-70 z-50 p-4 flex justify-between items-center">
+  <!-- <nav class="fixed top-0 w-full bg-black bg-opacity-70 z-50 p-4 flex justify-between items-center">
     <div class="text-xl font-bold">Mithra's Portfolio</div>
     <ul class="flex space-x-6">
       <li><a href="#about" class="hover:text-teal-400">About</a></li>
@@ -20,7 +20,42 @@
       <li><a href="#youtube" class="hover:text-teal-400">Talks</a></li>
       <li><a href="#contact" class="hover:text-teal-400">Contact</a></li>
     </ul>
-  </nav>
+  </nav> -->
+  <!-- Navbar -->
+<nav class="fixed top-0 w-full bg-black bg-opacity-70 z-50 p-4">
+  <div class="flex items-center justify-between max-w-7xl mx-auto">
+    <div class="text-xl font-bold text-white">Mithra's Portfolio</div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-button" class="md:hidden text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-6 text-white">
+      <li><a href="#about" class="hover:text-teal-400">About</a></li>
+      <li><a href="#projects" class="hover:text-teal-400">Projects</a></li>
+      <li><a href="#experience" class="hover:text-teal-400">Experience</a></li>
+      <li><a href="#skills" class="hover:text-teal-400">Skills</a></li>
+      <li><a href="#youtube" class="hover:text-teal-400">Talks</a></li>
+      <li><a href="#contact" class="hover:text-teal-400">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile Menu -->
+  <ul id="mobile-menu" class="mt-4 space-y-4 text-white md:hidden hidden text-center">
+    <li><a href="#about" class="block hover:text-teal-400">About</a></li>
+    <li><a href="#projects" class="block hover:text-teal-400">Projects</a></li>
+    <li><a href="#experience" class="block hover:text-teal-400">Experience</a></li>
+    <li><a href="#skills" class="block hover:text-teal-400">Skills</a></li>
+    <li><a href="#youtube" class="block hover:text-teal-400">Talks</a></li>
+    <li><a href="#contact" class="block hover:text-teal-400">Contact</a></li>
+  </ul>
+</nav>
 
   <!-- Hero Section -->
 
@@ -369,6 +404,14 @@
       text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     }
   </style>
+  <script>
+    const menuBtn = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 
 </html>
